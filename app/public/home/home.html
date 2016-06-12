@@ -1,21 +1,43 @@
 
 <div class="container">
-    <div class="row">
+    <div class="row homeRow">
+        AccessCode: <input type="text" ng-model="accessCode.text">
+    </div>
+    <div class="row homeRow">
         <div class="col col-xs-3">
             <div class="homeZipUploader"
                 ngf-select
                 ng-model="files.zipArchive"
                 ngf-pattern="'*/*'"
                 ngf-accept="'*/*'"
-                ngf-max-size="500MB">
-                <div ng-show="files.zipArchive == null">Select</div>
-                <div ng-show="files.zipArchive != null">Selected</div>
+                ngf-max-size="1000MB">
+                <div ng-show="files.zipArchive == null">Select zip</div>
+                <div ng-show="files.zipArchive != null">Zip selected</div>
             </div>
         </div>
         <div class="col col-xs-3">
             <button class="btn btn-default"
-                    ng-click="Upload(files.zipArchive)">
-                Upload
+                    ng-click="Upload(files.zipArchive, 'zip')">
+                Upload zip
+            </button>
+        </div>
+    </div>
+    <div class="row homeRow">
+        <div class="col col-xs-3">
+            <div class="homeZipUploader"
+                 ngf-select
+                 ng-model="files.jsonData"
+                 ngf-pattern="'*/*'"
+                 ngf-accept="'*/*'"
+                 ngf-max-size="1000MB">
+                <div ng-show="files.jsonData == null">Select JSON</div>
+                <div ng-show="files.jsonData != null">JSON selected</div>
+            </div>
+        </div>
+        <div class="col col-xs-3">
+            <button class="btn btn-default"
+                    ng-click="Upload(files.jsonData, 'json')">
+                Upload json
             </button>
         </div>
     </div>

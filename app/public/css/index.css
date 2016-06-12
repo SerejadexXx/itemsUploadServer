@@ -1,5 +1,8 @@
+.homeRow {
+    margin: 10px 0;
+}
 .homeZipUploader {
-    width: 100px;
+    width: 130px;
     height: 50px;
     text-align: center;
     padding: 10px;
