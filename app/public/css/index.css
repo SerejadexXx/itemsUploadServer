@@ -1,0 +1,16 @@
+.homeZipUploader {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.homeZipUploader:hover {
+    cursor: pointer;
+}
+
+.homeZipUploader:active {
+    color: #e2e2e2;
+}
